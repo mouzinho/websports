@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Match;
+
+class MatchesController extends Controller {
+	//
+	function index() {
+		$matches = Match::all();
+
+		return view('matches.index')->withMatches($matches);
+	}
+
+	function create() {
+		return view('matches.create');
+	}
+}
