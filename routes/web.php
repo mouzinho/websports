@@ -11,8 +11,10 @@
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 Route::get('/sobre', function () {
@@ -21,7 +23,7 @@ Route::get('/sobre', function () {
 
 Route::resource('teams', 'TeamsController');
 
-Route::resource('teams/delete/{id}', 'TeamsController');
+Route::resource('teams/delete/{id}', 'TeamsController@delete');
 
 Route::resource('matches', 'MatchesController');
 
